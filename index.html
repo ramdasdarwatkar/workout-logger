@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calendar</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/barbell-32x32.png" />
+    <link rel="apple-touch-icon" href="icons/barbell-64x64.png" />
+<link rel="apple-touch-icon" href="icons/barbell-128x128.png" />
+<link rel="apple-touch-icon" href="icons/barbell-256x256.png" />
+<link rel="apple-touch-icon" href="icons/barbell-512x512.png" />
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<meta name="theme-color" content="#db4938" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container-wrapper">
+    <header>
+      <button class="header__btn header__btn--left" title="Menu">
+        <svg class="icon" width="20px" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z"/>
+        </svg>
+      </button>
+      <button class="header__btn header__btn--right" title="Add event">
+        <svg class="icon" width="26px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="#fff" d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"/>
+        </svg>
+      </button>
+    </header>
+    <main>
+      <div class="calendar-container">
+        <div class="calendar-container__header">
+          <button class="calendar-container__btn calendar-container__btn--left" title="Previous">
+            <i class="icon ion-ios-arrow-back"></i>
+          </button>
+          <h2 class="calendar-container__title" id="monthYear"></h2>
+          <button class="calendar-container__btn calendar-container__btn--right" title="Next">
+            <i class="icon ion-ios-arrow-forward"></i>
+          </button>
+        </div>
+        <div class="calendar-container__body">
+          <div class="calendar-table" id="calendarTable">
+            
+          </div>
+        </div>
+      </div>
+      <div class="events-container">
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="workout__title">Today's Workout</span>
+            <button id="logExerciseButton" class="btn btn-primary">Log Exercise</button>
+        </div>
+        <ul class="events__list p-s-0 mt-3" id="workoutContainer"></ul>
+    </div>
+    </main>
+  </div>
+
+  <div id="exerciseCanvas" class="exercise-canvas">
+    <div class="exercise-canvas__header">
+        <h2>Select Muscle</h2>
+        <button class="close-btn" onclick="closeCanvas()">✖</button>
+    </div>
+    <select id="muscleSelect" class="selectpicker" onchange="populateExercises()">
+        <option value="">Select Muscle</option>
+        <option value="chest">Chest</option>
+        <option value="back">Back</option>
+        <option value="legs">Legs</option>
+        <option value="arms">Arms</option>
+        <!-- Add more muscles as needed -->
+    </select>
+    <div id="exercisesContainer" class="exercises-container"></div>
+</div>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

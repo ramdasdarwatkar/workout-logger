@@ -1,0 +1,31 @@
+{
+    "name": "Workout Logger",
+    "short_name": "Workout",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "icons/barbell-32x32.png",
+        "type": "image/png", "sizes": "32x32"
+      },
+      {
+        "src": "icons/barbell-64x64.png",
+        "type": "image/png", "sizes": "64x64"
+      },
+      {
+        "src": "icons/barbell-128x128.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "icons/barbell-256x256.png",
+        "type": "image/png", "sizes": "256x256"
+      },
+      {
+        "src": "icons/barbell-512x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
