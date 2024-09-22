@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/serviceWorker.js')
+      navigator.serviceWorker.register('serviceWorker.js')
           .then(function(registration) {
               console.log('Service Worker registered with scope:', registration.scope);
           })
@@ -9,6 +9,7 @@ if ('serviceWorker' in navigator) {
           });
   });
 }
+
 
 
     const exerciseCanvas = document.getElementById("exerciseCanvas");
